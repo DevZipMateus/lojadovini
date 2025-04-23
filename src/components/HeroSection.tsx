@@ -6,13 +6,13 @@ const HeroSection = () => {
   return (
     <section 
       id="início" 
-      className="relative min-h-screen flex items-start pt-24 md:pt-16 md:items-center bg-gradient-to-r from-gray-50 to-white overflow-hidden"
+      className="relative min-h-screen flex items-start pt-24 md:pt-16 md:items-center bg-gradient-to-r from-secondary to-secondary/95 overflow-hidden"
     >
       {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-5">
-        <div className="absolute inset-y-0 right-0 w-1/2 bg-black/5 skew-x-12 transform origin-bottom"></div>
-        <div className="absolute top-1/4 left-1/4 w-32 h-32 md:w-64 md:h-64 rounded-full bg-black/10"></div>
-        <div className="absolute bottom-1/3 right-1/3 w-32 h-32 md:w-40 md:h-40 rounded-full bg-gray-200/20"></div>
+      <div className="absolute inset-0 opacity-10">
+        <div className="absolute inset-y-0 right-0 w-1/2 bg-primary/20 skew-x-12 transform origin-bottom"></div>
+        <div className="absolute top-1/4 left-1/4 w-32 h-32 md:w-64 md:h-64 rounded-full bg-primary/20"></div>
+        <div className="absolute bottom-1/3 right-1/3 w-32 h-32 md:w-40 md:h-40 rounded-full bg-accent/20"></div>
       </div>
 
       <div className="container mx-auto px-4 z-10">
