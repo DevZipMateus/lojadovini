@@ -1,97 +1,89 @@
 
 import { useState, useEffect } from 'react';
+import { Menu, X } from 'lucide-react';
 import { cn } from "@/lib/utils";
-import { useIsMobile } from '@/hooks/use-mobile';
-import Logo from './header/Logo';
-import DesktopNavigation from './header/DesktopNavigation';
-import MobileMenuButton from './header/MobileMenuButton';
-import MobileMenuOverlay from './header/MobileMenuOverlay';
-import MobileMenuPanel from './header/MobileMenuPanel';
-import { MenuItem } from './header/types';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const isMobile = useIsMobile();
-
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 10) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
-      }
+      setScrolled(window.scrollY > 10);
     };
 
     window.addEventListener('scroll', handleScroll);
-    
-    // Close menu when resizing from mobile to desktop
-    const handleResize = () => {
-      if (window.innerWidth >= 768 && isMenuOpen) {
-        setIsMenuOpen(false);
-      }
-    };
-    
-    window.addEventListener('resize', handleResize);
-    
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-      window.removeEventListener('resize', handleResize);
-    };
-  }, [isMenuOpen]);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
-  // Prevent body scrolling when mobile menu is open
-  useEffect(() => {
-    if (isMobile) {
-      if (isMenuOpen) {
-        document.body.style.overflow = 'hidden';
-      } else {
-        document.body.style.overflow = '';
-      }
-      
-      return () => {
-        document.body.style.overflow = '';
-      };
-    }
-  }, [isMenuOpen, isMobile]);
-
-  const menuItems: MenuItem[] = [
-    { name: 'Início', href: '#início' },
-    { name: 'Sobre Nós', href: '#sobre-nós' },
-    { name: 'Serviços', href: '#serviços' },
-    { name: 'Planos', href: '#planos' },
-    { name: 'Contato', href: '#contato' }
+  const navigation = [
+    { name: 'Home', href: '#home' },
+    { name: 'Sobre', href: '#sobre' },
+    { name: 'Produtos', href: '#produtos' },
+    { name: 'Depoimentos', href: '#depoimentos' },
+    { name: 'Contato', href: '#contato' },
   ];
 
   return (
-    <header 
-      className={cn(
-        'fixed w-full z-50 transition-all duration-300 ease-in-out',
-        scrolled 
-          ? 'bg-white/95 backdrop-blur-md shadow-sm py-3' 
-          : 'bg-transparent py-4'
-      )}
-    >
-      <div className="container mx-auto px-4 flex justify-between items-center">
-        <Logo scrolled={scrolled} />
-        <DesktopNavigation menuItems={menuItems} scrolled={scrolled} />
-        <MobileMenuButton 
-          isMenuOpen={isMenuOpen} 
-          toggleMenu={toggleMenu} 
-          scrolled={scrolled} 
-        />
-      </div>
+    <header className={cn(
+      "fixed w-full z-50 transition-all duration-300",
+      scrolled ? "bg-white/90 backdrop-blur-md shadow-sm py-4" : "bg-transparent py-6"
+    )}>
+      <nav className="container-section">
+        <div className="flex items-center justify-between">
+          <a href="#home" className="relative z-10">
+            <img 
+              src="/lovable-uploads/2e364987-b0ea-431c-8ea5-627208090506.png"
+              alt="Loja do Vini" 
+              className="h-12 w-auto"
+            />
+          </a>
 
-      <MobileMenuOverlay isMenuOpen={isMenuOpen} onClose={() => setIsMenuOpen(false)} />
-      <MobileMenuPanel 
-        isMenuOpen={isMenuOpen} 
-        onClose={() => setIsMenuOpen(false)} 
-        menuItems={menuItems}
-      />
+          {/* Desktop Navigation */}
+          <div className="hidden md:flex items-center space-x-8">
+            {navigation.map((item) => (
+              <a
+                key={item.name}
+                href={item.href}
+                className="text-sm font-medium text-gray-900 hover:text-gray-600 transition-colors"
+              >
+                {item.name}
+              </a>
+            ))}
+          </div>
+
+          {/* Mobile Menu Button */}
+          <button
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            className="md:hidden p-2 rounded-lg hover:bg-gray-100"
+          >
+            {isMenuOpen ? (
+              <X className="h-6 w-6" />
+            ) : (
+              <Menu className="h-6 w-6" />
+            )}
+          </button>
+        </div>
+
+        {/* Mobile Navigation */}
+        <div className={cn(
+          "md:hidden absolute top-full left-0 w-full bg-white shadow-lg transition-all duration-300 ease-in-out",
+          isMenuOpen ? "opacity-100 visible" : "opacity-0 invisible"
+        )}>
+          <div className="py-4 px-4 space-y-4">
+            {navigation.map((item) => (
+              <a
+                key={item.name}
+                href={item.href}
+                onClick={() => setIsMenuOpen(false)}
+                className="block text-base font-medium text-gray-900 hover:text-gray-600 transition-colors"
+              >
+                {item.name}
+              </a>
+            ))}
+          </div>
+        </div>
+      </nav>
     </header>
   );
 };
