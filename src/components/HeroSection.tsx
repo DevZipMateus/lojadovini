@@ -1,13 +1,7 @@
-
 import { ChevronRight } from 'lucide-react';
 import AnimatedSection from './AnimatedSection';
-
 const HeroSection = () => {
-  return (
-    <section 
-      id="início" 
-      className="relative min-h-screen flex items-start pt-24 md:pt-16 md:items-center bg-gradient-to-br from-secondary to-primary overflow-hidden"
-    >
+  return <section id="início" className="relative min-h-screen flex items-start pt-24 md:pt-16 md:items-center bg-gradient-to-br from-secondary to-primary overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute inset-y-0 right-0 w-1/2 bg-white/20 skew-x-12 transform origin-bottom"></div>
@@ -30,12 +24,7 @@ const HeroSection = () => {
               iPhone, iPad, MacBook e acessórios em Belo Horizonte.
             </p>
             <div className="flex flex-wrap gap-4 pt-2">
-              <a 
-                href="https://wa.me/5531993243003" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="btn-primary flex items-center gap-2"
-              >
+              <a href="https://wa.me/5531993243003" target="_blank" rel="noopener noreferrer" className="btn-primary flex items-center gap-2">
                 Compre pelo WhatsApp
                 <ChevronRight className="h-4 w-4" />
               </a>
@@ -67,11 +56,7 @@ const HeroSection = () => {
               <div className="absolute -top-12 -left-8 w-64 h-64 bg-white/10 rounded-full filter blur-xl"></div>
               <div className="absolute -bottom-6 -right-6 w-48 h-48 bg-primary-light/20 rounded-full filter blur-xl"></div>
               <div className="relative z-10 bg-white/10 backdrop-blur-sm shadow-xl rounded-2xl p-1 transform transition-all duration-500 hover:scale-[1.01] hover:shadow-2xl">
-                <img 
-                  src="/lovable-uploads/2e364987-b0ea-431c-8ea5-627208090506.png"
-                  alt="Loja do Vini - Produtos Apple" 
-                  className="rounded-2xl w-full h-auto object-contain p-8"
-                />
+                <img alt="Loja do Vini - Produtos Apple" src="/lovable-uploads/c00b3f0c-32a4-4af8-8a86-c99b58ba14e4.png" className="rounded-2xl w-full h-auto object-contain p-8" />
               </div>
             </div>
           </AnimatedSection>
@@ -79,8 +64,6 @@ const HeroSection = () => {
       </div>
       
       <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-background to-transparent"></div>
-    </section>
-  );
+    </section>;
 };
-
 export default HeroSection;
