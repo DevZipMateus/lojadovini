@@ -1,4 +1,3 @@
-
 import { CheckCircle } from 'lucide-react';
 import AnimatedSection from './AnimatedSection';
 
@@ -30,9 +29,7 @@ const AboutSection = () => {
               <div className="relative z-10 bg-white/10 backdrop-blur-sm shadow-xl rounded-2xl p-1 transform transition-all duration-500 hover:scale-[1.01] hover:shadow-2xl">
                 <video 
                   className="rounded-2xl w-full h-auto object-cover"
-                  autoPlay
-                  loop
-                  muted
+                  controls
                   playsInline
                 >
                   <source src="/lovable-uploads/Snapsave.app_-yHiEnmlWFBYBjzTY.mp4" type="video/mp4" />

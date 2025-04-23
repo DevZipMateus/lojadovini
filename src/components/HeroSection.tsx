@@ -1,5 +1,6 @@
-import { ChevronRight } from 'lucide-react';
+import { ChevronRight, Instagram } from 'lucide-react';
 import AnimatedSection from './AnimatedSection';
+
 const HeroSection = () => {
   return <section id="início" className="relative min-h-screen flex items-start pt-24 md:pt-16 md:items-center bg-gradient-to-br from-secondary to-primary overflow-hidden">
       {/* Background Pattern */}
@@ -30,6 +31,15 @@ const HeroSection = () => {
               </a>
               <a href="#produtos" className="bg-white/10 hover:bg-white/20 text-white px-6 py-3 rounded-lg font-medium transition-all duration-300">
                 Ver Produtos
+              </a>
+              <a
+                href="https://www.instagram.com/lojadovini"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500 to-pink-500 text-white px-6 py-3 rounded-lg hover:opacity-90 transition-opacity"
+              >
+                <Instagram className="w-5 h-5" />
+                Siga-nos no Instagram
               </a>
             </div>
 
