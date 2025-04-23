@@ -1,28 +1,20 @@
-
 import HeroSection from "@/components/HeroSection";
 import AboutSection from "@/components/AboutSection";
 import ContactSection from "@/components/ContactSection";
+import ProductShowcase from "@/components/ProductShowcase";
 
 const Index = () => {
   return (
     <>
       <HeroSection />
       <AboutSection />
-      <section id="produtos" className="py-16 bg-white">
+      <section id="produtos" className="py-16 bg-gradient-to-b from-secondary to-primary/20">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-10">Nossos Produtos</h2>
-          <p className="text-center text-gray-600 mb-12">
+          <h2 className="text-3xl font-bold text-center mb-6 text-white">Nossos Produtos</h2>
+          <p className="text-center text-gray-300 mb-12">
             Trabalhamos com todos os produtos Apple disponíveis, com garantia e suporte humanizado.
           </p>
-          <div className="text-center py-8">
-            <p>Produtos Apple em Destaque:</p>
-            <ul className="flex flex-wrap justify-center gap-8 mt-6">
-              <li className="font-medium">iPhones</li>
-              <li className="font-medium">iPads</li>
-              <li className="font-medium">MacBooks</li>
-              <li className="font-medium">Acessórios</li>
-            </ul>
-          </div>
+          <ProductShowcase />
         </div>
       </section>
       <section id="depoimentos" className="py-16 bg-gray-50">
