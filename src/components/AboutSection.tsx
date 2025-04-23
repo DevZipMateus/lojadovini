@@ -25,16 +25,20 @@ const AboutSection = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mt-12">
           <AnimatedSection animation="slide-in-left">
             <div className="relative">
-              <div className="relative z-10 rounded-2xl overflow-hidden shadow-xl">
-                <img 
-                  src="https://images.unsplash.com/photo-1551651767-d5ffbdd04b83?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
-                  alt="Produtos Apple" 
-                  className="w-full h-auto object-cover"
-                />
+              <div className="absolute -top-12 -left-8 w-64 h-64 bg-white/10 rounded-full filter blur-xl"></div>
+              <div className="absolute -bottom-6 -right-6 w-48 h-48 bg-primary-light/20 rounded-full filter blur-xl"></div>
+              <div className="relative z-10 bg-white/10 backdrop-blur-sm shadow-xl rounded-2xl p-1 transform transition-all duration-500 hover:scale-[1.01] hover:shadow-2xl">
+                <video 
+                  className="rounded-2xl w-full h-auto object-cover"
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                >
+                  <source src="/lovable-uploads/Snapsave.app_-yHiEnmlWFBYBjzTY.mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
               </div>
-              
-              <div className="absolute -bottom-6 -right-6 w-48 h-48 bg-black/10 rounded-full z-0"></div>
-              <div className="absolute -top-6 -left-6 w-32 h-32 bg-gray-100 rounded-full z-0"></div>
             </div>
           </AnimatedSection>
           
