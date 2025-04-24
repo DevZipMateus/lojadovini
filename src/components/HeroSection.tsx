@@ -37,7 +37,7 @@ const HeroSection = () => {
               </a>
             </div>
 
-            <div className="pt-8 flex items-center gap-8 my-0 py-[15px]">
+            <div className="pt-5 flex items-center gap-8 my-0 py-[25px]">
               <div className="text-center">
                 <div className="text-3xl font-bold text-white">+300</div>
                 <div className="text-sm text-gray-200">Clientes Satisfeitos</div>
