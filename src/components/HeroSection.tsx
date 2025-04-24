@@ -1,7 +1,7 @@
 import { ChevronRight, Instagram } from 'lucide-react';
 import AnimatedSection from './AnimatedSection';
 const HeroSection = () => {
-  return <section id="início" className="relative min-h-screen flex items-start pt-24 md:pt-16 md:items-center bg-gradient-to-br from-secondary to-primary overflow-hidden">
+  return <section id="início" className="relative min-h-screen flex items-start pt-24 md:pt-16 md:items-center bg-gradient-to-br from-secondary to-primary overflow-hidden py-[26px]">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute inset-y-0 right-0 w-1/2 bg-white/20 skew-x-12 transform origin-bottom"></div>
