@@ -1,3 +1,4 @@
+
 import { ChevronRight, Instagram } from 'lucide-react';
 import AnimatedSection from './AnimatedSection';
 
@@ -33,7 +34,7 @@ const HeroSection = () => {
                 Ver Produtos
               </a>
               <a
-                href="https://www.instagram.com/lojadovini"
+                href="https://www.instagram.com/lojado.vini/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500 to-pink-500 text-white px-6 py-3 rounded-lg hover:opacity-90 transition-opacity"
