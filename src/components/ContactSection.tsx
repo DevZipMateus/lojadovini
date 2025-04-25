@@ -1,3 +1,4 @@
+
 import { Mail, Phone, MapPin } from 'lucide-react';
 import AnimatedSection from './AnimatedSection';
 import { cn } from '@/lib/utils';
@@ -26,8 +27,7 @@ const ContactSection = () => {
                   </div>
                   <div className="ml-3">
                     <h4 className="text-base font-medium">Telefone</h4>
-                    <p className="text-sm text-gray-600">(11) 5555-5555</p>
-                    <p className="text-sm text-gray-600">(11) 98765-4321</p>
+                    <p className="text-sm text-gray-600">(31) 99324-3003</p>
                   </div>
                 </div>
                 
@@ -38,8 +38,7 @@ const ContactSection = () => {
                   </div>
                   <div className="ml-3">
                     <h4 className="text-base font-medium">E-mail</h4>
-                    <p className="text-sm text-gray-600 break-words">contato@contabilify.com.br</p>
-                    <p className="text-sm text-gray-600 break-words">atendimento@contabilify.com.br</p>
+                    <p className="text-sm text-gray-600 break-words">lojado.vini.ltda@gmail.com</p>
                   </div>
                 </div>
                 
@@ -50,16 +49,17 @@ const ContactSection = () => {
                   </div>
                   <div className="ml-3">
                     <h4 className="text-base font-medium">Endereço</h4>
-                    <p className="text-sm text-gray-600">Av. Paulista, 1000 - Bela Vista</p>
-                    <p className="text-sm text-gray-600">São Paulo - SP, 01310-000</p>
+                    <p className="text-sm text-gray-600">Rua Dener Cunha Peixoto, 11</p>
+                    <p className="text-sm text-gray-600">Buritis - Belo Horizonte</p>
+                    <p className="text-sm text-gray-600">CEP: 30575-817</p>
                   </div>
                 </div>
               </div>
               
               <div className="mt-6 p-4 bg-secondary/20 rounded-lg">
                 <h4 className="text-lg font-medium mb-2">Horário de Atendimento</h4>
-                <p className="text-gray-600 text-sm">Segunda a Sexta: 9h às 18h</p>
-                <p className="text-gray-600 text-sm">Sábados: 9h às 13h</p>
+                <p className="text-gray-600 text-sm">Segunda a Sexta: 10h às 19h</p>
+                <p className="text-gray-600 text-sm">Sábados: 10h às 15h</p>
               </div>
             </div>
           </AnimatedSection>

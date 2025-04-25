@@ -1,8 +1,8 @@
 import { ChevronRight, Instagram } from 'lucide-react';
 import AnimatedSection from './AnimatedSection';
+
 const HeroSection = () => {
   return <section id="início" className="relative min-h-screen flex items-start pt-24 md:pt-16 md:items-center bg-gradient-to-br from-secondary to-primary overflow-hidden py-[26px]">
-      {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute inset-y-0 right-0 w-1/2 bg-white/20 skew-x-12 transform origin-bottom"></div>
         <div className="absolute top-1/4 left-1/4 w-32 h-32 md:w-64 md:h-64 rounded-full bg-white/20"></div>
@@ -39,7 +39,7 @@ const HeroSection = () => {
 
             <div className="pt-5 flex items-center gap-8 my-0 py-[25px]">
               <div className="text-center">
-                <div className="text-3xl font-bold text-white">+300</div>
+                <div className="text-3xl font-bold text-white">+2000</div>
                 <div className="text-sm text-gray-200">Clientes Satisfeitos</div>
               </div>
               <div className="h-12 w-px bg-white/20"></div>
@@ -49,8 +49,8 @@ const HeroSection = () => {
               </div>
               <div className="h-12 w-px bg-white/20"></div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-white">BR</div>
-                <div className="text-sm text-gray-200">Envio Nacional</div>
+                <div className="text-3xl font-bold text-white">BH</div>
+                <div className="text-sm text-gray-200">Belo Horizonte</div>
               </div>
             </div>
           </AnimatedSection>
@@ -70,4 +70,5 @@ const HeroSection = () => {
       <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-background to-transparent"></div>
     </section>;
 };
+
 export default HeroSection;

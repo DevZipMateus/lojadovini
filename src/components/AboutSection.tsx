@@ -1,13 +1,14 @@
+
 import { CheckCircle } from 'lucide-react';
 import AnimatedSection from './AnimatedSection';
 
 const AboutSection = () => {
   const features = [
-    'Atendimento personalizado',
+    'Acessórios Originais Apple',
     'Suporte humanizado',
-    'Produtos originais',
-    'Garantia Apple',
-    'Envio para todo Brasil',
+    'Mais de 2000 clientes satisfeitos',
+    'Garantia fornecida pela Apple',
+    'Atendimento personalizado',
     'Facilidade na compra'
   ];
 
@@ -45,12 +46,13 @@ const AboutSection = () => {
             </span>
             <h3 className="text-3xl font-bold">Excelência em Produtos Apple</h3>
             <p className="text-gray-600">
-              Inaugurada em 2020, a Loja do Vini nasceu com o intuito de proporcionar uma experiência 
-              de compra única aos amantes da Apple, com transparência, facilidade e muita atenção aos detalhes.
+              Inaugurada em 2020, a Loja do Vini é especializada em produtos Apple originais,
+              com mais de 2000 clientes satisfeitos. Nosso compromisso é oferecer uma experiência 
+              de compra única com transparência e suporte humanizado.
             </p>
             <p className="text-gray-600">
-              Trabalhamos com todos os produtos Apple disponíveis e usamos a marca Apple como nossa 
-              referência em qualidade e exclusividade.
+              Trabalhamos com produtos Apple originais e acessórios, sempre priorizando 
+              a qualidade e a satisfação dos nossos clientes.
             </p>
             
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-4">
