@@ -1,3 +1,4 @@
+
 import HeroSection from "@/components/HeroSection";
 import AboutSection from "@/components/AboutSection";
 import ContactSection from "@/components/ContactSection";
@@ -12,7 +13,7 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-6 text-white">Nossos Produtos</h2>
           <p className="text-center text-gray-300 mb-12">
-            Trabalhamos com todos os produtos Apple disponíveis, com garantia e suporte humanizado.
+            Trabalhamos com produtos Apple originais, com garantia fornecida diretamente pela Apple.
           </p>
           <ProductShowcase />
         </div>
@@ -22,15 +23,15 @@ const Index = () => {
           <h2 className="text-3xl font-bold text-center mb-10">Destaques</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="bg-white p-6 rounded-lg shadow-md text-center">
-              <h3 className="text-xl font-bold text-primary mb-2">+300 clientes satisfeitos</h3>
-              <p className="text-gray-600">Compromisso com excelência e qualidade</p>
+              <h3 className="text-xl font-bold text-primary mb-2">+2000</h3>
+              <p className="text-gray-600">Clientes satisfeitos desde 2020</p>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-md text-center">
-              <h3 className="text-xl font-bold text-primary mb-2">Envios para todo o Brasil</h3>
-              <p className="text-gray-600">Logística segura e eficiente</p>
+              <h3 className="text-xl font-bold text-primary mb-2">Produtos Originais</h3>
+              <p className="text-gray-600">Acessórios Originais Apple</p>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-md text-center">
-              <h3 className="text-xl font-bold text-primary mb-2">Garantia Apple e suporte humanizado</h3>
+              <h3 className="text-xl font-bold text-primary mb-2">Suporte Humanizado</h3>
               <p className="text-gray-600">Atendimento personalizado</p>
             </div>
           </div>
