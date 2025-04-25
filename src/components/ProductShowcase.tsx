@@ -28,7 +28,7 @@ const products: Product[] = [
   {
     name: "Acessórios",
     image: "/lovable-uploads/relogios.jpg",
-    description: "Acessórios originais Apple"
+    description: "Diveros Acessórios e modelos"
   }
 ];
 
