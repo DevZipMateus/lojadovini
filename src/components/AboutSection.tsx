@@ -4,10 +4,9 @@ import AnimatedSection from './AnimatedSection';
 
 const AboutSection = () => {
   const features = [
-    'Acessórios Originais Apple',
     'Suporte humanizado',
     'Mais de 2000 clientes satisfeitos',
-    'Garantia fornecida pela Apple',
+    'Garantia',
     'Atendimento personalizado',
     'Facilidade na compra'
   ];

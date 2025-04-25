@@ -30,7 +30,7 @@ const products: Product[] = [
     message: "Olá! Venho do site e tenho interesse em comprar MacBook"
   },
   {
-    name: "Acessórios",
+    name: "Apple Watch",
     image: "/lovable-uploads/relogios.jpg",
     description: "Diveros Acessórios e modelos",
     message: "Olá! Venho do site e tenho interesse em comprar acessórios Apple"
