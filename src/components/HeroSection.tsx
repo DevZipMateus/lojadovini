@@ -1,3 +1,4 @@
+
 import { ChevronRight, Instagram } from 'lucide-react';
 import AnimatedSection from './AnimatedSection';
 
@@ -38,19 +39,12 @@ const HeroSection = () => {
             </div>
 
             <div className="pt-5 flex items-center gap-8 my-0 py-[25px]">
-              <div className="text-center">
-                <div className="text-3xl font-bold text-white">+2000</div>
-                <div className="text-sm text-gray-200">Clientes Satisfeitos</div>
-              </div>
-              <div className="h-12 w-px bg-white/20"></div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-white">100%</div>
-                <div className="text-sm text-gray-200">Originais</div>
-              </div>
-              <div className="h-12 w-px bg-white/20"></div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-white">BH</div>
-                <div className="text-sm text-gray-200">Belo Horizonte</div>
+              <div className="text-center flex items-center gap-4">
+                <div className="text-white font-medium">Desde 2020</div>
+                <div className="h-5 w-px bg-white/40"></div>
+                <div className="text-white font-medium">+ de 2000 clientes satisfeitos</div>
+                <div className="h-5 w-px bg-white/40"></div>
+                <div className="text-white font-medium">Atendemos Belo Horizonte e região</div>
               </div>
             </div>
           </AnimatedSection>
