@@ -2,6 +2,8 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Instagram } from "lucide-react";
 import AnimatedSection from "./AnimatedSection";
+import ProductDetailsDialog from "./ProductDetailsDialog";
+import { useState } from "react";
 
 interface Product {
   name: string;
@@ -39,6 +41,7 @@ const products: Product[] = [
 
 const ProductShowcase = () => {
   const phoneNumber = "5531993243003";
+  const [selectedProduct, setSelectedProduct] = useState<string | null>(null);
 
   const createWhatsAppLink = (message: string) => {
     return `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
@@ -55,29 +58,38 @@ const ProductShowcase = () => {
           >
             <Card className="overflow-hidden h-full transform transition-all duration-300 hover:scale-[1.02] hover:shadow-xl bg-white/90 backdrop-blur-sm">
               <CardContent className="p-0">
-                <a
-                  href={createWhatsAppLink(product.message)}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="block"
+                <div 
+                  className="aspect-square relative overflow-hidden cursor-pointer"
+                  onClick={() => setSelectedProduct(product.name)}
                 >
-                  <div className="aspect-square relative overflow-hidden cursor-pointer">
-                    <img
-                      src={product.image}
-                      alt={product.name}
-                      className="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
-                    />
-                  </div>
-                </a>
+                  <img
+                    src={product.image}
+                    alt={product.name}
+                    className="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
+                  />
+                </div>
                 <div className="p-4">
                   <h3 className="text-xl font-semibold text-primary mb-2">{product.name}</h3>
                   <p className="text-gray-600">{product.description}</p>
+                  <a
+                    href={createWhatsAppLink(product.message)}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-4 inline-block text-primary hover:underline text-sm"
+                  >
+                    Solicitar informações
+                  </a>
                 </div>
               </CardContent>
             </Card>
           </AnimatedSection>
         ))}
       </div>
+      <ProductDetailsDialog
+        open={!!selectedProduct}
+        onOpenChange={(open) => !open && setSelectedProduct(null)}
+        productType={selectedProduct || ""}
+      />
       <div className="mt-12 text-center">
         <a
           href="https://www.instagram.com/lojado.vini/"
