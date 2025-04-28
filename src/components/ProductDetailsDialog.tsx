@@ -1,6 +1,6 @@
 
-import { Dialog, DialogContent } from "@/components/ui/dialog";
-import { Button } from "@/components/ui/button";
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
+import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { Video, Image } from "lucide-react";
 
 interface ProductMedia {
@@ -58,35 +58,40 @@ const ProductDetailsDialog = ({ open, onOpenChange, productType }: ProductDetail
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent className="max-w-4xl">
-        <div className="space-y-4">
-          <h2 className="text-2xl font-bold text-primary">{details.name}</h2>
-          <p className="text-gray-600">{details.description}</p>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+      <DialogContent className="max-w-5xl p-0 overflow-hidden bg-white/95 backdrop-blur-sm">
+        <DialogHeader className="px-6 pt-6 pb-2">
+          <DialogTitle className="text-2xl font-bold text-primary">{details.name}</DialogTitle>
+          <p className="text-gray-600 mt-2">{details.description}</p>
+        </DialogHeader>
+        
+        <div className="p-6 pt-2 overflow-y-auto max-h-[70vh]">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {details.media.map((item, index) => (
-              <div key={index} className="relative aspect-video bg-gray-100 rounded-lg overflow-hidden">
-                {item.type === "video" ? (
-                  <>
-                    <video 
-                      src={item.src} 
-                      controls 
-                      className="w-full h-full object-cover"
-                    />
-                    <Video className="absolute top-2 right-2 text-white bg-black/50 rounded-full p-1" />
-                  </>
-                ) : (
-                  <>
-                    <img 
-                      src={item.src} 
-                      alt={item.title}
-                      className="w-full h-full object-cover" 
-                    />
-                    <Image className="absolute top-2 right-2 text-white bg-black/50 rounded-full p-1" />
-                  </>
-                )}
-                <div className="absolute bottom-0 left-0 right-0 bg-black/50 text-white p-2 text-sm">
-                  {item.title}
+              <div key={index} className="rounded-lg overflow-hidden shadow-md bg-gray-50 border border-gray-100 transition-all hover:shadow-xl">
+                <div className="relative">
+                  {item.type === "video" ? (
+                    <AspectRatio ratio={16/9} className="bg-black">
+                      <video 
+                        src={item.src} 
+                        controls 
+                        className="w-full h-full object-contain"
+                        preload="metadata"
+                      />
+                      <Video className="absolute top-3 right-3 text-white bg-black/50 rounded-full p-1 z-10" size={24} />
+                    </AspectRatio>
+                  ) : (
+                    <AspectRatio ratio={16/9} className="bg-black">
+                      <img 
+                        src={item.src} 
+                        alt={item.title}
+                        className="w-full h-full object-contain" 
+                      />
+                      <Image className="absolute top-3 right-3 text-white bg-black/50 rounded-full p-1 z-10" size={24} />
+                    </AspectRatio>
+                  )}
+                  <div className="p-3 text-center font-medium text-gray-800">
+                    {item.title}
+                  </div>
                 </div>
               </div>
             ))}
